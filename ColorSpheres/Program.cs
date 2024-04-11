@@ -4,6 +4,13 @@ namespace ColorSpheres
 {
     class Program
     {
+        /// <summary>
+        /// Method allows the creation of colors and spheres by using methods 
+        /// located in other classes. The user can throw the spheres and
+        /// print the number of times throw. It is also possible to pop the 
+        /// spheres (radius = 0).
+        /// </summary>
+        /// <param name="args">No args are being used</param>
         static void Main(string[] args)
         {
             // Creating colors
