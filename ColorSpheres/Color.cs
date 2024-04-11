@@ -42,7 +42,7 @@ namespace ColorSpheres
         //Set
         
         /// <summary>
-        /// 
+        /// Method sets the value for the red from the rgb
         /// </summary>
         /// <param name="r">stands for "red"</param>
         /// <returns></returns>
@@ -52,7 +52,7 @@ namespace ColorSpheres
         }
 
         /// <summary>
-        /// 
+        /// Method sets the value for the green from the rgb
         /// </summary>
         /// <param name="g">stands for "green"</param>
         /// <returns></returns>
@@ -62,7 +62,7 @@ namespace ColorSpheres
         }
 
         /// <summary>
-        /// 
+        /// Method sets the value for the color blue from the rgb
         /// </summary>
         /// <param name="b">stands for "blue"</param>
         /// <returns></returns>
@@ -72,7 +72,7 @@ namespace ColorSpheres
         }
 
         /// <summary>
-        /// 
+        /// Method sets the alpha (transparency)
         /// </summary>
         /// <param name="a">stands for "alpha"</param>
         /// <returns></returns>
@@ -83,26 +83,46 @@ namespace ColorSpheres
 
         //Get
 
+        /// <summary>
+        /// Method gets the value for the red from the rgb
+        /// </summary>
+        /// <returns>value of color red</returns>
         private byte GetRed()
         {
             return _red;
         }
 
+        /// <summary>
+        /// Method gets the value for the green from the rgb
+        /// </summary>
+        /// <returns>value of color green</returns>
         private byte GetGreen()
         {
             return _green;
         }
 
+        /// <summary>
+        /// Method gets the value for the blue from the rgb
+        /// </summary>
+        /// <returns>value of color blue</returns>
         private byte GetBlue()
         {
             return _blue;
         }
 
+        /// <summary>
+        /// Method gets the value for the alpha
+        /// </summary>
+        /// <returns>value of alpha</returns>
         private byte GetAlpha()
         {
             return _alpha;
         }
 
+        /// <summary>
+        /// Method gets the value for the grey color ((r+g+b)/3)
+        /// </summary>
+        /// <returns>value of color grey</returns>
         private byte GetGrey()
         {
             return (byte)((_red + _green + _blue) / 3);
