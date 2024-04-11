@@ -2,64 +2,72 @@ namespace ColorSpheres
 {
     public class Color
     {
-        private byte red, green, blue, alpha, average;
+        private readonly byte _red, _green, _blue, _alpha;
 
 
         public Color(byte r, byte g, byte b, byte a)
         {
-            red = SetRed(r);
-            green = SetGreen(g);
-            blue = SetBlue(b);
-            alpha = SetAlpha(a);
+            _red = SetRed(r);
+            _green = SetGreen(g);
+            _blue = SetBlue(b);
+            _alpha = SetAlpha(a);
+        }
+
+        public Color(byte r, byte g, byte b)
+        {
+            _red = SetRed(r);
+            _green = SetGreen(g);
+            _blue = SetBlue(b);
+            _alpha = SetAlpha(255);
         }
 
         //Set
         
-        private readonly byte SetRed(byte r)
+        private byte SetRed(byte r)
         {
             return r;
         }
 
-        private readonly byte SetGreen(byte g)
+        private byte SetGreen(byte g)
         {
             return g;
         }
 
-        private readonly byte SetBlue(byte b)
+        private byte SetBlue(byte b)
         {
             return b;
         }
 
-        private readonly byte SetAlpha(byte a)
+        private byte SetAlpha(byte a)
         {
             return a;
         }
 
         //Get
 
-        private readonly byte GetRed()
+        private byte GetRed()
         {
-            return red;
+            return _red;
         }
 
-        private readonly byte GetGreen()
+        private byte GetGreen()
         {
-            return green;
+            return _green;
         }
 
-        private readonly byte GetBlue()
+        private byte GetBlue()
         {
-            return blue;
+            return _blue;
         }
 
-        private readonly byte GetAlpha()
+        private byte GetAlpha()
         {
-            return alpha;
+            return _alpha;
         }
 
-        private int GetGrey()
+        private byte GetGrey()
         {
-            return (red + green + blue) / 3;
+            return (byte)((_red + _green + _blue) / 3);
         }
     }
 }
