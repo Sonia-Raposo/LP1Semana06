@@ -13,7 +13,25 @@ namespace ColorSpheres
             // Creating spheres
             Sphere violetSphere = new Sphere (violet, 2.5f);
             Sphere aquaSphere = new Sphere (aqua, 5.0f);
-  
+
+
+            //Throw violet and print times thrown
+            violetSphere.Throw();
+            Console.WriteLine(violetSphere.GetTimesThrown);
+
+            //Throw aqua and print times thrown
+            aquaSphere.Throw();
+            Console.WriteLine(aquaSphere.GetTimesThrown);
+
+
+            //Throw violet twice, print times thrown and pop
+            violetSphere.Throw();
+            violetSphere.Throw();
+            violetSphere.Pop();
+            Console.WriteLine(violetSphere.GetTimesThrown);
+
+            //Pop aqua sphere
+            aquaSphere.Pop();            
         }
     }
 }
